@@ -114,6 +114,16 @@ section#detalhes{
   padding: 20px;
   border-radius: 8px;
 }
+article{
+  background-color: var(--fundo-card);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+article h2 {
+  color: var(--destaque);
+  margin-bottom: 20px;
+}
 article#video .video-container{
   position: relative;
   margin: auto;
@@ -135,4 +145,74 @@ article#video .video-container{
 h2{
   color: var(--destaque);
   margin-bottom: 10px;
+}
+#skill-container{
+  display: grid;
+  grid-template-columns: 1fr;
+ gap: 30px;
+}
+#skill-container .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+#skill-container .nome{
+  font-weight: bold;
+  color: var(--texto);
+
+}
+#skill-container .porcent{
+  font-weight: bold;
+  color: var(--texto);
+}
+#skill-container .barra{
+  width: 100%;
+  height: 8px;
+  background-color: var(--fundo-principal);
+  border-radius: 5px;
+}
+
+#skill-container .progresso{
+  height: 100%;
+  background-color: var(--destaque);
+  border-radius: 5px;
+}
+
+#formacao-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+#formacao-container .item{
+  background-color: var(--fundo-principal);
+  border-radius: 8px;
+  border-left: 10px solid var(--destaque-inverso);
+  transition:border-width 0.5s, border-color 0.5s ;
+
+
+}
+#formacao-container .item:hover{
+   cursor: pointer;
+   border-color: var(--destaque);
+   border-width: 20px;
+}
+
+#formacao-container .ano{
+  color: var(--texto);
+  font-weight: bold;
+
+}
+#formacao-container .instituicao{
+    color: var(--destaque);
+    font-size: 1.3em;
+}
+#formacao-container .competencia{
+  color: var(--texto);
+  font-weight: bold;
+}
+@media screen and (min-width: 768px){
+  #skill-container{
+    grid-template-columns: 1fr 1fr;
+  }
 }
