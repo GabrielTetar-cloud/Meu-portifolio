@@ -211,8 +211,63 @@ h2{
   color: var(--texto);
   font-weight: bold;
 }
+#projeto-container{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+#projeto-container .projeto{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 18px solid var(--destaque-inverso);
+  transition: border-color 0.6s, border-width 0.6s;
+}
+#projeto-container .projeto:hover{
+  border-color: var(--destaque);
+  border-width: 30px;
+  cursor: pointer;
+}
+#projeto-container .foto{
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+
+}
+footer{
+  background-color: var(--destaque);
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: var(--texto-inverso);
+}
+footer a {
+  color: var(--texto-inverso);
+}
+footer a:hover{
+  color: var(--destaque-inverso);
+}
+
 @media screen and (min-width: 768px){
   #skill-container{
     grid-template-columns: 1fr 1fr;
+  }
+  #projeto-container{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  #projeto-container .projeto-info {
+    max-width:  80%;
+
+  }
+  #projeto-container .foto{
+    max-width: 20%;
+    aspect-ratio: 1/1;
+    max-height: 200px;
   }
 }
