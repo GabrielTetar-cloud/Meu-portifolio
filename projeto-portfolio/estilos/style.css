@@ -26,6 +26,14 @@ body{
   background-color: var(--fundo-principal);
   color: var(--texto);
 }
+body.escuro{
+  --fundo-principal:#0B0D0B;
+  --texto:#F2F2F0;
+  --texto-inverso:#3F403C;
+  --destaque:#9755D9;
+  --destaque-inverso:#622773;
+  --fundo-card:#A192A6;
+}
 header{
   background-color: var(--destaque);
   padding: 10px;
